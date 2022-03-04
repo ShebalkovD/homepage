@@ -1,0 +1,59 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+   
+}
+
+* ,*::before,*::after{
+    box-sizing: inherit;
+}
+
+@font-face { 
+    font-family: 'M PLUS Rounded 1c Regular'; 
+    src:url(dist/fonts/MPLUSRounded1c-Regular.ttf)  format('truetype')         
+}
+@font-face { 
+    font-family: 'M PLUS Rounded 1c Light'; 
+    src:url(dist/fonts/MPLUSRounded1c-Light.ttf)  format('truetype')         
+}
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    background-color: #202023;
+    color: #fff;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 1px;
+    text-align: left;
+    font-weight: 300;
+
+}
+
+$linkPink: #ff63c3;
+$accent: #88ccca;
+$devider: #525252;
+
+
+.container{
+    max-width: 520px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.section__title{
+    font-size: 28px;
+    font-weight: 400;
+    position: relative;
+    border-bottom: 5px solid $devider;
+    max-width: fit-content;
+    padding-bottom:3px;
+    margin-bottom: 20px;
+   
+
+}
+
+
+

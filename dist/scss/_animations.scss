@@ -1,0 +1,23 @@
+@keyframes floatArrowX{
+    0% {
+        -moz-transform: translate(-5px);
+      }
+      50% {
+        -moz-transform: translate(5px);
+      }
+      100% {
+        -moz-transform: translate(-5px);
+      }
+}
+
+@keyframes btnFadeIn{
+  0% {
+    -moz-transform: translateY(60px);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: translateY(0px);
+    opacity: 1;
+  }
+}
