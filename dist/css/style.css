@@ -483,10 +483,10 @@ body {
           transform: scale(1.03);
 }
 .contacts__hiring-item:nth-child(1) {
-  background-image: url(/dist/img/upwork-fb\ 1.jpg);
+  background-image: url(dist/img/upwork-fb\ 1.jpg);
 }
 .contacts__hiring-item:nth-child(2) {
-  background-image: url(/dist/img/hh.jpg);
+  background-image: url(dist/img/hh.jpg);
 }
 .contacts__sign {
   display: block;
