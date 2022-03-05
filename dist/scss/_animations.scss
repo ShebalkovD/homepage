@@ -21,3 +21,18 @@
     opacity: 1;
   }
 }
+
+.animate__animated.animate__fadeInRight{
+  --animate-duration: 500ms;
+}
+
+// @keyframes burgerFadeOut{
+//   0%{
+//     opacity: 1;
+//   }
+//   100%{
+//     -moz-transform: translate(50px);
+//     opacity: 0;
+//     display: none;
+//   }
+// }

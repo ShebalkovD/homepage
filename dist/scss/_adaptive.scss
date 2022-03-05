@@ -1,0 +1,72 @@
+@media(max-width:768px ){
+   
+            
+    .burger{
+     display: flex
+    }
+
+    .header{
+
+        &__nav{
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
+            &-item{
+                &:nth-child(2){
+                    display: none;
+                }
+                &:nth-child(3){
+                    display: none;
+                }
+                &:nth-child(5){
+                    display: none;
+                }
+            }
+        }
+    }
+              
+}
+
+@media(max-width:600px ){
+    .container{
+        max-width: 90%;
+    }
+
+    .header{
+        &__greeting{
+            padding: 10px 40px;
+        }
+        &-profile{
+            margin-bottom: 40px;
+        }
+    }
+
+    .contacts__hiring-item{
+        max-width: 220px;
+    }
+
+    .portfolio__wrapper__item-card{
+        max-width: 200px;
+    }
+}
+
+@media(max-width:550px ){
+    .portfolio__wrapper{
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+    .portfolio__wrapper__item-card{
+        width: 250px;
+        margin: 0 auto;
+        max-width: none;
+        margin-bottom: 10px;
+    }
+    
+    .portfolio__wrapper__item > p{
+        margin: 0 auto;
+    }
+    .portfolio__wrapper__item > a{
+        margin: 0 auto;
+    }
+    
+}

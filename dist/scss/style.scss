@@ -11,6 +11,7 @@
         display: flex;
         align-items: center;
         position: relative;
+        
         &__logo{
             display: flex;
             justify-content: center;
@@ -219,16 +220,17 @@
             width: 240px;
             height: 100px;
             border-radius: 20px;
+            margin: 5px;
             background-color: #fff;
             transition: all .1s;
             &:hover{
                 transform: scale(1.03)
             }
             &:nth-child(1){
-                background-image: url(img/upwork-fb\ 1.jpg);
+                background-image: url(/img/upwork-fb\ 1.jpg);
             }
             &:nth-child(2){
-                background-image: url(img/hh.jpg);
+                background-image: url(/img/hh.jpg);
             }
         }
         margin-bottom: 25px;
@@ -244,6 +246,79 @@
         
     }
 }
+
+
+.burger{
+    flex-direction: column;
+    align-content: space-around;
+    
+    padding: 7px;
+    height: 50px;
+    width: 50px;
+    background: none;
+    border-radius: 5px;
+    span{
+        
+        margin: 5px auto;
+        
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        
+    }
+    transition: all .2s;
+    
+    
+
+   
+    display: none;
+    
+    &__menu{
+        padding: 5px;
+        z-index: 10;
+        position: fixed;
+        right: 17px;
+        display: none;
+        flex-direction: column;
+        width: 150px;
+        height: 180px;
+        border: 2px solid $devider;
+        background-color: #202023;
+        border-radius: 10px;
+        &-item{
+            
+            padding: 6px;
+            background-color: #202023;
+            color: #fff;
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            margin: 10px auto;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid $devider;
+            padding-bottom: 20px;
+            &:nth-last-child(1){
+                border: none;
+            }
+            img{
+                margin-right: 5px;
+                margin-top: -2px;
+            }
+        }
+    }
+    &__active{
+        display: flex;
+    }
+    &__disabled{
+        animation: burgerFadeOut 500ms ease-out;
+        display: none;
+    }
+}
+
+@import "adaptive";
+
 
 
 

@@ -93,6 +93,10 @@ body {
     opacity: 1;
   }
 }
+.animate__animated.animate__fadeInRight {
+  --animate-duration: 500ms;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -150,6 +154,7 @@ body {
   margin-bottom: 40px;
 }
 .portfolio__wrapper {
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
@@ -166,12 +171,12 @@ body {
           flex-direction: column;
 }
 .portfolio__wrapper__item:nth-child(1) > button {
-  background-image: url(/dist/img/Fendo.jpg);
+  background-image: url(/img/Fendo.jpg);
   background-position: top;
   background-position-x: center;
 }
 .portfolio__wrapper__item:nth-child(2) > button {
-  background-image: url(/dist/img/Todo.jpg);
+  background-image: url(/img/Todo.jpg);
   background-position: center;
   background-position-x: center;
   background-size: cover;
@@ -472,6 +477,7 @@ body {
   width: 240px;
   height: 100px;
   border-radius: 20px;
+  margin: 5px;
   background-color: #fff;
   -webkit-transition: all 0.1s;
   -o-transition: all 0.1s;
@@ -483,10 +489,10 @@ body {
           transform: scale(1.03);
 }
 .contacts__hiring-item:nth-child(1) {
-  background-image: url(img/upwork-fb\ 1.jpg);
+  background-image: url(/img/upwork-fb\ 1.jpg);
 }
 .contacts__hiring-item:nth-child(2) {
-  background-image: url(img/hh.jpg);
+  background-image: url(/img/hh.jpg);
 }
 .contacts__sign {
   display: block;
@@ -496,4 +502,147 @@ body {
 }
 .contacts__sign-text {
   text-align: center;
+}
+
+.burger {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  padding: 7px;
+  height: 50px;
+  width: 50px;
+  background: none;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  display: none;
+}
+.burger span {
+  margin: 5px auto;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+}
+.burger__menu {
+  padding: 5px;
+  z-index: 10;
+  position: fixed;
+  right: 17px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 150px;
+  height: 180px;
+  border: 2px solid #525252;
+  background-color: #202023;
+  border-radius: 10px;
+}
+.burger__menu-item {
+  padding: 6px;
+  background-color: #202023;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  margin: 10px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 2px solid #525252;
+  padding-bottom: 20px;
+}
+.burger__menu-item:nth-last-child(1) {
+  border: none;
+}
+.burger__menu-item img {
+  margin-right: 5px;
+  margin-top: -2px;
+}
+.burger__active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.burger__disabled {
+  -webkit-animation: burgerFadeOut 500ms ease-out;
+          animation: burgerFadeOut 500ms ease-out;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .header__nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header__nav-item:nth-child(2) {
+    display: none;
+  }
+  .header__nav-item:nth-child(3) {
+    display: none;
+  }
+  .header__nav-item:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .header__greeting {
+    padding: 10px 40px;
+  }
+  .header-profile {
+    margin-bottom: 40px;
+  }
+
+  .contacts__hiring-item {
+    max-width: 220px;
+  }
+
+  .portfolio__wrapper__item-card {
+    max-width: 200px;
+  }
+}
+@media (max-width: 550px) {
+  .portfolio__wrapper {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .portfolio__wrapper__item-card {
+    width: 250px;
+    margin: 0 auto;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+
+  .portfolio__wrapper__item > p {
+    margin: 0 auto;
+  }
+
+  .portfolio__wrapper__item > a {
+    margin: 0 auto;
+  }
 }
