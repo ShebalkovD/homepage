@@ -228,9 +228,11 @@
             }
             &:nth-child(1){
                 background-image: url(/img/upwork-fb\ 1.jpg);
+                background-position: center;
             }
             &:nth-child(2){
                 background-image: url(/img/hh.jpg);
+                background-position: center;
             }
         }
         margin-bottom: 25px;

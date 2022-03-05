@@ -490,9 +490,11 @@ body {
 }
 .contacts__hiring-item:nth-child(1) {
   background-image: url(/img/upwork-fb\ 1.jpg);
+  background-position: center;
 }
 .contacts__hiring-item:nth-child(2) {
   background-image: url(/img/hh.jpg);
+  background-position: center;
 }
 .contacts__sign {
   display: block;
@@ -644,5 +646,11 @@ body {
 
   .portfolio__wrapper__item > a {
     margin: 0 auto;
+  }
+}
+@media (max-width: 550px) {
+  .header__greeting {
+    height: 60px;
+    padding: 15px 20px;
   }
 }

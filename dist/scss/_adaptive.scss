@@ -70,3 +70,11 @@
     }
     
 }
+@media(max-width:550px ){
+    .header{
+        &__greeting{
+            height: 60px;
+            padding: 15px 20px;
+       }
+    }
+}
