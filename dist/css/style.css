@@ -97,6 +97,10 @@ body {
   --animate-duration: 500ms;
 }
 
+.animate__animated.animate__fadeOutRight {
+  --animate-duration: 500ms;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -513,6 +517,7 @@ body {
           flex-direction: column;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
+  z-index: 11;
   padding: 7px;
   height: 50px;
   width: 50px;
@@ -533,20 +538,21 @@ body {
   padding: 5px;
   z-index: 10;
   position: fixed;
-  right: 17px;
+  right: 0;
+  top: 0;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 150px;
-  height: 180px;
-  border: 2px solid #525252;
+  width: 250px;
+  height: 100vh;
+  border-left: 2px solid #525252;
   background-color: #202023;
-  border-radius: 10px;
 }
 .burger__menu-item {
   padding: 6px;
+  padding-top: 80px;
   background-color: #202023;
   color: #fff;
   width: 120px;
@@ -563,10 +569,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: 2px solid #525252;
-  padding-bottom: 20px;
-}
-.burger__menu-item:nth-last-child(1) {
-  border: none;
+  padding-bottom: 80px;
 }
 .burger__menu-item img {
   margin-right: 5px;
@@ -581,6 +584,16 @@ body {
   -webkit-animation: burgerFadeOut 500ms ease-out;
           animation: burgerFadeOut 500ms ease-out;
   display: none;
+}
+
+.burgerBtn__active {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.lock {
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
